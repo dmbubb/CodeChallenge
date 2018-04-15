@@ -1,5 +1,9 @@
 ### https://www.hackerrank.com/challenges/s10-basic-statistics/problem ###
 
+# The following inputs should yield 43900.6, 44627.5, and 4978
+# 10
+# 64630 11735 14216 99233 14470 4978 73429 38120 51135 67060
+
 #!/usr/bin/env python3
 
 import os
