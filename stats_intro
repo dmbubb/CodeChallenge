@@ -7,9 +7,8 @@
 # this makes it a bit more portable
 #!/usr/bin/env python3
 
-import os
-import sys
 from collections import Counter
+from operator import itemgetter
 
 def find_med(arr):
     if len(arr) %2 == 0:
@@ -25,8 +24,12 @@ mean = sum(arr)/len(arr)
 
 median = find_med(arr)
 
-mode = Counter(arr).most_common()[0][0]
+M = list(Counter(arr).most_common())
+M = sorted(M, key = itemgetter(1), reverse = True)
+
+mode = min([x for x in M if x[1] == M[0][1]])[0]
 
 print('{0:.1f}'.format(mean))
 print('{0:.1f}'.format(median))
 print('{0:.1f}'.format(mode))
+    
