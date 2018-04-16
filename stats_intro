@@ -27,7 +27,7 @@ median = find_med(arr)
 M = list(Counter(arr).most_common())
 M = sorted(M, key = itemgetter(1), reverse = True)
 
-mode = min([x for x in M if x[1] == M[0][1]])[0]
+mode = min([x[0] for x in M if x[1] == M[0][1]])
 
 print('{0:.1f}'.format(mean))
 print('{0:.1f}'.format(median))
